@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
 
-                const {location, feelslike, temperature} = data;
+                const {location, feelslike, temperature, humidity, wind_speed} = data;
                 msg1.textContent = `The forecast for ${location}:`;
-                msg2.textContent = `It is now ${temperature} but feels like ${feelslike}.`;
+                msg2.textContent = `It is now ${temperature} but feels like ${feelslike}. With wind speed of ${wind_speed} km\\h and humidity of ${humidity}%.`;
             })
         });
     });

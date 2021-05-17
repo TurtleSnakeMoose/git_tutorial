@@ -84,12 +84,14 @@ app.get('/weather', (req,res) => {
                 });
                 return _log.error(' ERROR getWeatherAtCoords() ', err);
             }
-            const {temperature, feelslike} = weatherData;
+            const {temperature, feelslike, humidity, wind_speed} = weatherData;
 
             res.send({
                 location,
                 temperature,
-                feelslike
+                feelslike,
+                humidity,
+                wind_speed
             });
         });
     });

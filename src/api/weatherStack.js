@@ -21,9 +21,9 @@ const getWeatherAtCoords = ({long,lat}, callback ) => {
                 callback('Unable to fetch weather data!', null);
             }
             else if (response.body.current) {
-                const {temperature, feelslike} = response.body.current;
+                const {temperature, feelslike, humidity, wind_speed} = response.body.current;
                 _log.success(' HTTP REQUEST SUCCESS ','successful request to weatherStack!');
-                callback(null, {temperature, feelslike});
+                callback(null, {temperature, feelslike, humidity, wind_speed});
             }
         }
     );
