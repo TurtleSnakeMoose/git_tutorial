@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         msg1.textContent = 'Loading...';
         msg2.textContent = '';
 
-        fetch(`http://localhost:3000/weather?destination=${dest_input.value}`).then((response) => {
+        fetch(`/weather?destination=${dest_input.value}`).then((response) => {
             response.json().then((data) => {
 
                 if (data.error) {
